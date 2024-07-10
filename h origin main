@@ -1,0 +1,24 @@
+* [33mbc0a8a6[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m chore: Update page title to Persmalibratum.com UAJM
+* [33m63e7e75[m chore: Update FrontEndController to include Open Graph metadata
+* [33m32ceadc[m chore: Update .gitignore to exclude /vendor directory
+* [33m34da905[m chore: Update .gitignore to include /vendor directory
+* [33mba8e6a8[m chore: Update .gitignore to exclude /vendor directory
+* [33m06043d8[m chore: Refactor ArtikelController to remove unused tags_id field
+* [33mf46b05a[m chore: Refactor ArtikelController to remove unused tags_id field
+* [33mb0239dc[m chore: Update newsbody.blade.php to include trending articles and opini section
+* [33mdc935e0[m chore: Update newsbody.blade.php to include trending articles and opini section
+* [33m328512d[m chore: Update page title to Persmalibratum.com
+* [33mf67a6a4[m[33m ([m[1;31morigin/1-add-rich-editor-text[m[33m)[m chore: Update .gitignore to include /public/storage
+* [33mc888cf8[m chore: Ignore /public/storage in .gitignore
+* [33m40963d8[m del zip
+* [33m9bd494c[m Refactor ArtikelController to remove unused tags_id field
+*   [33ma13456d[m Merge branch 'main' of https://github.com/RahmatRafiq/Portal-News
+[32m|[m[33m\[m  
+[32m|[m * [33m601414b[m chore: Update vendor dependencies
+* [33m|[m [33m3a494e9[m chore: Update vendor dependencies
+[33m|[m[33m/[m  
+* [33m8e4b6a7[m up vendor
+* [33mfe4bbc7[m up
+* [33mdad4943[m up
+* [33m79aead9[m first commit
+* [33md0d1be1[m first commit
