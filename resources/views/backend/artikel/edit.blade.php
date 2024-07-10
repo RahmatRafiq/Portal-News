@@ -45,6 +45,16 @@
                                 @endforeach
                             </select>
                         </div>
+                        <div class="form-group">
+                            <label for="penulis_id">Penulis</label>
+                            <select name="penulis_id" class="form-control select2">
+                                @foreach ($penulis as $row)
+                                <option value="{{ $row->id }}" {{ old('penulis_id', $artikel->penulis_id) == $row->id
+                                    ? 'selected' : '' }}>
+                                    {{ $row->nama_penulis }}
+                                </option>
+                                @endforeach
+
 
                         <div class="form-group">
                             <label for="tags_id">Tags</label>
