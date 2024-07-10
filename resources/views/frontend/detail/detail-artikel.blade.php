@@ -7,7 +7,7 @@
 <meta property="og:image" content="{{ isset($ogImage) ? $ogImage : asset('uploads/' . $artikel->gambar_artikel) }}">
 
 <title>
-    Persmalibratum.com
+    Persmalibratum.com UAJM
 </title>
 <link href="{{ asset('frontend/css/media_query.css') }}" rel="stylesheet" type="text/css" />
 <link href="{{ asset('frontend/css/bootstrap.css') }}" rel="stylesheet" type="text/css" />
