@@ -27,8 +27,8 @@
 
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Persmalibratum.com UAJM" />
-    <meta property="og:description" content="Persmalibratum adalah portal berita mahasiswa Universitas XYZ yang menyediakan berita terkini dan informasi terbaru." />
-    <meta property="og:image" content="{{ asset('backend/img/icon.ico') }}" />
+    <meta property="og:description" content="Persmalibratum adalah portal berita mahasiswa Universitas Atmajaya Makassar yang menyediakan berita terkini dan informasi terbaru." />
+    <meta property="og:image" content="{{ asset('backend/img/og_image.jpg') }}" />
     <meta property="og:url" content="{{ url()->current() }}" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Persmalibratum.com UAJM" />
@@ -36,13 +36,13 @@
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Persmalibratum.com UAJM" />
-    <meta name="twitter:description" content="Persmalibratum adalah portal berita mahasiswa Universitas XYZ yang menyediakan berita terkini dan informasi terbaru." />
-    <meta name="twitter:image" content="{{ asset('backend/img/icon.ico') }}" />
+    <meta name="twitter:description" content="Persmalibratum adalah portal berita mahasiswa Universitas Atmajaya Makassar yang menyediakan berita terkini dan informasi terbaru." />
+    <meta name="twitter:image" content="{{ asset('backend/img/og_image.jpg') }}" />
     <meta name="twitter:site" content="@persmalibratum" />
     <meta name="twitter:creator" content="@persmalibratum" />
 
     <!-- Additional Meta Tags for SEO -->
-    <meta name="description" content="Persmalibratum adalah portal berita mahasiswa Universitas XYZ yang menyediakan berita terkini dan informasi terbaru." />
+    <meta name="description" content="Persmalibratum adalah portal berita mahasiswa Universitas Atmajaya Makassar yang menyediakan berita terkini dan informasi terbaru." />
     <meta name="keywords" content="berita, mahasiswa, universitas, portal berita, informasi terbaru" />
     <meta name="author" content="Persmalibratum UAJM" />
 
@@ -60,4 +60,5 @@
     <script src="{{ asset('frontend/js/modernizr-3.5.0.min.js') }}"></script>
     <link rel="icon" href="{{ asset('backend/img/icon.ico') }}" type="image/x-icon" />
 </head>
+
 </html>
