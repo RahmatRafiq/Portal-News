@@ -2,7 +2,7 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 <title>
-    Laravel 9
+    Persmalibratum.com UAJM
 </title>
 <link href="{{ asset('frontend/css/media_query.css') }}" rel="stylesheet" type="text/css" />
 <link href="{{ asset('frontend/css/bootstrap.css') }}" rel="stylesheet" type="text/css" />
@@ -16,3 +16,4 @@
 <link href="{{ asset('frontend/css/style_1.css') }}" rel="stylesheet" type="text/css" />
 <!-- Modernizr JS -->
 <script src="{{ asset('frontend/js/modernizr-3.5.0.min.js') }}"></script>
+<link rel="icon" href="{{ asset('backend/img/icon.ico') }}" type="image/x-icon" />
