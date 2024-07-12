@@ -26,20 +26,7 @@
     <title>Persmalibratum.com UAJM</title>
 
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Persmalibratum.com UAJM" />
-    <meta property="og:description" content="Persmalibratum adalah portal berita mahasiswa Universitas Atmajaya Makassar yang menyediakan berita terkini dan informasi terbaru." />
-    <meta property="og:image" content="{{ asset('backend/img/og_image.jpg') }}" />
-    <meta property="og:url" content="{{ url()->current() }}" />
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="Persmalibratum.com UAJM" />
-
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Persmalibratum.com UAJM" />
-    <meta name="twitter:description" content="Persmalibratum adalah portal berita mahasiswa Universitas Atmajaya Makassar yang menyediakan berita terkini dan informasi terbaru." />
-    <meta name="twitter:image" content="{{ asset('backend/img/og_image.jpg') }}" />
-    <meta name="twitter:site" content="@persmalibratum" />
-    <meta name="twitter:creator" content="@persmalibratum" />
+  
 
     <!-- Additional Meta Tags for SEO -->
     <meta name="description" content="Persmalibratum adalah portal berita mahasiswa Universitas Atmajaya Makassar yang menyediakan berita terkini dan informasi terbaru." />
