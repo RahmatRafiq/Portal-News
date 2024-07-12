@@ -33,7 +33,7 @@
 
                         <div class="form-group">
                             <label for="kategori_id">Kategori</label>
-                            <select name="kategori_id" class="form-control select2">
+                            <select name="kategori_id" class="form-control">
                                 @foreach ($kategori as $row)
                                 <option value="{{ $row->id }}" {{ old('kategori_id')==$row->id ? 'selected' : '' }}>
                                     {{ $row->nama_kategori }}
@@ -43,7 +43,7 @@
                         </div>
                         <div class="form-group">
                             <label for="penulis_id">Penulis</label>
-                            <select name="penulis_id" class="form-control select2">
+                            <select name="penulis_id" class="form-control">
                                 @foreach ($penulis as $row)
                                 <option value="{{ $row->id }}" {{ old('penulis_id')==$row->id ? 'selected' : '' }}>
                                     {{ $row->nama_penulis }}
@@ -51,17 +51,17 @@
                                 @endforeach
                             </select>
                         </div>
-                        <div class="form-group">
+                        {{-- <div class="form-group">
                             <label for="tags_id">Tags</label>
-                            <select name="tags_id[]" class="form-control select2" multiple="multiple">
-                                @foreach ($tags as $tag)
+                            <select name="tags_id[]" class="form-control" multiple="multiple">
+                                @foreach ($tags sebagai $tag)
                                 <option value="{{ $tag->id }}" {{ in_array($tag->id, old('tags_id', [])) ? 'selected' :
                                     '' }}>
                                     {{ $tag->nama_tags }}
                                 </option>
                                 @endforeach
                             </select>
-                        </div>
+                        </div> --}}
 
                         <div class="form-group">
                             <label for="gambar_artikel">Gambar Artikel</label>
@@ -70,7 +70,7 @@
 
                         <div class="form-group">
                             <label for="is_active">Status</label>
-                            <select name="is_active" class="form-control select2">
+                            <select name="is_active" class="form-control">
                                 <option value="1" {{ old('is_active')=='1' ? 'selected' : '' }}>Publish</option>
                                 <option value="0" {{ old('is_active')=='0' ? 'selected' : '' }}>Draft</option>
                             </select>

@@ -18,58 +18,54 @@
                     </div>
                 </div>
                 <div class="card-body">
-                    <form method="post" action="{{ route('artikel.update', $artikel->id) }}"
-                        enctype="multipart/form-data">
+                    <form method="post" action="{{ route('artikel.update', $artikel->id) }}" enctype="multipart/form-data">
                         @csrf
                         @method('PUT')
                         <div class="form-group">
                             <label for="judul">Judul Artikel</label>
-                            <input type="text" name="judul" class="form-control"
-                                value="{{ old('judul', $artikel->judul) }}" placeholder="Masukkan judul artikel">
+                            <input type="text" name="judul" class="form-control" value="{{ old('judul', $artikel->judul) }}" placeholder="Masukkan judul artikel">
                         </div>
 
                         <div class="form-group">
                             <label for="body">Body</label>
-                            <textarea name="body" class="form-control" id="body"
-                                rows="3">{{ old('body', $artikel->body) }}</textarea>
+                            <textarea name="body" class="form-control" id="body" rows="3">{{ old('body', $artikel->body) }}</textarea>
                         </div>
 
                         <div class="form-group">
                             <label for="kategori_id">Kategori</label>
-                            <select name="kategori_id" class="form-control select2">
+                            <select name="kategori_id" class="form-control">
                                 @foreach ($kategori as $row)
-                                <option value="{{ $row->id }}" {{ old('kategori_id', $artikel->kategori_id) == $row->id
-                                    ? 'selected' : '' }}>
+                                <option value="{{ $row->id }}" {{ old('kategori_id', $artikel->kategori_id) == $row->id ? 'selected' : '' }}>
                                     {{ $row->nama_kategori }}
                                 </option>
                                 @endforeach
                             </select>
                         </div>
+
                         <div class="form-group">
                             <label for="penulis_id">Penulis</label>
-                            <select name="penulis_id" class="form-control select2">
+                            <select name="penulis_id" class="form-control">
                                 @foreach ($penulis as $row)
-                                <option value="{{ $row->id }}" {{ old('penulis_id', $artikel->penulis_id) == $row->id
-                                    ? 'selected' : '' }}>
+                                <option value="{{ $row->id }}" {{ old('penulis_id', $artikel->penulis_id) == $row->id ? 'selected' : '' }}>
                                     {{ $row->nama_penulis }}
-                                </option>
-                                @endforeach
-
-
-                        <div class="form-group">
-                            <label for="tags_id">Tags</label>
-                            <select name="tags_id[]" class="form-control select2" multiple="multiple">
-                                @php
-                                $selectedTags = old('tags_id', json_decode($artikel->tags_id, true) ?? []);
-                                @endphp
-                                @foreach ($tags as $tag)
-                                <option value="{{ $tag->id }}" {{ in_array($tag->id, $selectedTags) ? 'selected' : ''
-                                    }}>
-                                    {{ $tag->nama_tags }}
                                 </option>
                                 @endforeach
                             </select>
                         </div>
+
+                        {{-- <div class="form-group">
+                            <label for="tags_id">Tags</label>
+                            <select name="tags_id[]" class="form-control" multiple="multiple">
+                                @php
+                                $selectedTags = old('tags_id', json_decode($artikel->tags_id, true) ?? []);
+                                @endphp
+                                @foreach ($tags as $tag)
+                                <option value="{{ $tag->id }}" {{ in_array($tag->id, $selectedTags) ? 'selected' : '' }}>
+                                    {{ $tag->nama_tags }}
+                                </option>
+                                @endforeach
+                            </select>
+                        </div> --}}
 
                         <div class="form-group">
                             <label for="gambar_artikel">Gambar Artikel</label>
@@ -80,11 +76,9 @@
 
                         <div class="form-group">
                             <label for="is_active">Status</label>
-                            <select name="is_active" class="form-control select2">
-                                <option value="1" {{ old('is_active', $artikel->is_active) == 1 ? 'selected' : ''
-                                    }}>Publish</option>
-                                <option value="0" {{ old('is_active', $artikel->is_active) == 0 ? 'selected' : ''
-                                    }}>Draft</option>
+                            <select name="is_active" class="form-control">
+                                <option value="1" {{ old('is_active', $artikel->is_active) == 1 ? 'selected' : '' }}>Publish</option>
+                                <option value="0" {{ old('is_active', $artikel->is_active) == 0 ? 'selected' : '' }}>Draft</option>
                             </select>
                         </div>
 
@@ -100,21 +94,20 @@
 </div>
 
 <!-- TinyMCE Script -->
-<script src="https://cdn.tiny.cloud/1/6jdasye4n88gih6plksapgsl334fmqa48fzzs0rirp23llra/tinymce/5/tinymce.min.js"
-    referrerpolicy="origin"></script>
+<script src="https://cdn.tiny.cloud/1/6jdasye4n88gih6plksapgsl334fmqa48fzzs0rirp23llra/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
 <script>
     tinymce.init({
-            selector: 'textarea#body',
-            apiKey: '6jdasye4n88gih6plksapgsl334fmqa48fzzs0rirp23llra',
-            plugins: 'advlist autolink lists link image charmap print preview hr anchor pagebreak',
-            toolbar_mode: 'floating',
-            toolbar: 'undo redo | bold italic underline strikethrough | bullist numlist | link image',
-            images_upload_url: '/upload'
-        });
+        selector: 'textarea#body',
+        apiKey: '6jdasye4n88gih6plksapgsl334fmqa48fzzs0rirp23llra',
+        plugins: 'advlist autolink lists link image charmap print preview hr anchor pagebreak',
+        toolbar_mode: 'floating',
+        toolbar: 'undo redo | bold italic underline strikethrough | bullist numlist | link image',
+        images_upload_url: '/upload'
+    });
 </script>
 <script>
     $(document).ready(function() {
-            $('.select2').select2();
-        });
+        $('.select2').select2();
+    });
 </script>
 @endsection

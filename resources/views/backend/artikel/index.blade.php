@@ -14,7 +14,7 @@
                 <div class="card full-height">
                     <div class="card-header">
                         <div class="card-head-row">
-                            <div closs="card-title"> Data Artikel</div>
+                            <div class="card-title"> Data Artikel</div>
                             <a href="{{ route('artikel.create') }}" class="btn btn-primary btn-sm ml-auto"><i
                                     class="fa fa-plus"></i> Tambah Artikel</a>
                         </div>
@@ -53,7 +53,7 @@
                                                     class=" btn btn-warning btn-sm"><i class="fas fa-pen"></i>Edit</a>
 
                                                 <form action="{{ route('artikel.destroy', $row->id) }}" method="post"
-                                                    class="d-inline">
+                                                    class="d-inline" onsubmit="return confirm('Apakah Anda yakin ingin menghapus artikel ini?');">
                                                     @csrf
                                                     @method ('delete')
                                                     <button class="btn btn-danger btn-sm">
@@ -64,7 +64,7 @@
                                         </tr>
                                     @empty
                                         <tr>
-                                            <td colspan="6" class="text-center">Data Masih Kosong</td>
+                                            <td colspan="7" class="text-center">Data Masih Kosong</td>
                                         </tr>
                                     @endforelse
                                 </tbody>
