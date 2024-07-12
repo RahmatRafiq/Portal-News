@@ -12,6 +12,39 @@ use Illuminate\Http\Request;
 class FrontEndController extends Controller
 {
 
+    // public function index()
+    // {
+    //     $penulis = Penulis::all();
+    //     $artikel = Artikel::latest()->where('is_active', true)->paginate(5); // Hanya ambil artikel yang statusnya Publish
+    //     $artkl = Artikel::orderBy('created_at', 'desc')->get();
+    //     $artikelbulan = Artikel::orderBy('views', 'desc')->whereMonth('created_at', now()->month)->take(7)->get();
+    //     $kategori = Kategori::all();
+    //     $tags = Tags::all();
+    //     $ktgr = Kategori::all();
+    //     $tentangkami = TentangKami::all();
+    //     $trendingArtikel = Artikel::where('created_at', '>=', now()->startOfWeek())
+    //         ->whereMonth('created_at', now()->month)
+    //         ->orderBy('views', 'desc')
+    //         ->take(5)
+    //         ->get();
+    //     $beritaTerpopulerTahun = Artikel::whereYear('created_at', now()->year)
+    //         ->orderBy('views', 'desc')
+    //         ->take(3)
+    //         ->get();
+
+    //     return view('frontend.layouts.home', [
+    //         'kategori' => $kategori,
+    //         'artikel' => $artikel,
+    //         'artkl' => $artkl,
+    //         'penulis' => $penulis,
+    //         'ktgr' => $ktgr,
+    //         'tags' => $tags,
+    //         'tentangkami' => $tentangkami,
+    //         'trendingArtikel' => $trendingArtikel,
+    //         'artikelbulan' => $artikelbulan,
+    //         'beritaTerpopulerTahun' => $beritaTerpopulerTahun,
+    //     ]);
+    // }
     public function index()
     {
         $penulis = Penulis::all();
@@ -45,7 +78,6 @@ class FrontEndController extends Controller
             'beritaTerpopulerTahun' => $beritaTerpopulerTahun,
         ]);
     }
-
 
     public function show($slug)
     {
